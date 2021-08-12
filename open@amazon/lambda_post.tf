@@ -10,8 +10,8 @@ module "lambda_post" {
 
   create_package = false
   s3_existing_package = {
-    bucket = "fixtures"
-    key    = "python3.8-zip/existing_package.zip"
+    bucket = var.lambda_bucket
+    key    = var.lambda_key
   }
 
   # Free TACOS don't have Python available, so we can't build natively there.
